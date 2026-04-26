@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>evverywhere — Cape Town Creative Studio · Strategy, Paid, Content, Web</title>
+<meta name="description" content="evverywhere is an independent Cape Town creative studio building world-class brand systems — strategy, paid advertising, creative media, business analysis and website development. Full creative packages delivered in 10 days."/>
+<meta name="keywords" content="creative agency Cape Town, digital marketing agency South Africa, paid advertising Cape Town, brand strategy agency, creative studio South Africa, web development Cape Town, performance marketing agency"/>
+<meta name="author" content="evverywhere"/>
+<meta name="robots" content="index,follow,max-image-preview:large"/>
+<meta name="theme-color" content="#F2EBDD"/>
+<meta name="referrer" content="no-referrer"/>
+<link rel="canonical" href="https://evverywhere.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="evverywhere — Cape Town Creative Studio"/>
+<meta property="og:description" content="World-class strategy, paid advertising, creative media, analysis and web — built in Cape Town, delivered everywhere."/>
+<meta property="og:url" content="https://evverywhere.com/"/>
+<meta property="og:locale" content="en_ZA"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="evverywhere — Cape Town Creative Studio"/>
+<meta name="twitter:description" content="From Cape Town to everywhere."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:opsz,wght@9..40,300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@1/bundled/lenis.min.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://evverywhere.com/#org","name":"evverywhere","alternateName":"evverywhere creative studio","url":"https://evverywhere.com","description":"Cape Town creative studio delivering strategy, paid advertising, creative media content, business analysis and website development.","foundingDate":"2024","founder":[{"@type":"Person","name":"Daniel"},{"@type":"Person","name":"Lliam"}],"address":{"@type":"PostalAddress","addressLocality":"Cape Town","addressRegion":"Western Cape","addressCountry":"ZA"},"geo":{"@type":"GeoCoordinates","latitude":-33.9249,"longitude":18.4241},"areaServed":[{"@type":"Country","name":"South Africa"},{"@type":"Place","name":"Global"}],"sameAs":["https://instagram.com/The.evverywhere"],"contactPoint":{"@type":"ContactPoint","email":"hello@evverywhere.com","contactType":"Sales","availableLanguage":["English"]},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand Strategy"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Paid Advertising"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Creative Media Content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Business Analysis"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Development"}}]}
+</script>
+<style>
+:root{
+  --cream:#F2EBDD; --cream-2:#E8E0D1; --cream-3:#DDD3BE; --paper:#FBF7EE;
+  --ink:#0E0E0C; --ink-2:#1C1A16; --ink-soft:#3A352D; --ink-mute:#6B6357;
+  --terra:#B8462E; --terra-deep:#8C2F1D; --ochre:#A77C3F;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --line:1px solid rgba(14,14,12,.12);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;-webkit-text-size-adjust:100%;scroll-behavior:auto}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:var(--sans);font-weight:400;
+  font-feature-settings:'ss01','liga','kern';
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;cursor:none;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:.05;mix-blend-mode:multiply
+}
+::selection{background:var(--ink);color:var(--cream)}
+::-webkit-scrollbar{width:0;background:transparent}
+img,svg,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{background:none;border:none;font:inherit;color:inherit;cursor:none}
+
+/* Loader */
+#ld{position:fixed;inset:0;background:var(--cream);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;transition:opacity 1s ease,visibility 1s}
+#ld.out{opacity:0;visibility:hidden;pointer-events:none}
+.ld-w{font-family:var(--serif);font-size:1.75rem;font-style:italic;font-weight:300;letter-spacing:-.025em;color:var(--ink);opacity:0;animation:fade .9s ease forwards .15s;font-variation-settings:"opsz" 144}
+.ld-l{height:1px;width:0;background:var(--ink);animation:line 1.3s cubic-bezier(.65,.05,.36,1) forwards .5s}
+.ld-c{font-family:var(--mono);font-size:.55rem;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-mute);opacity:0;animation:fade .9s ease forwards 1.05s}
+@keyframes fade{to{opacity:1}}
+@keyframes line{to{width:96px}}
+
+/* Cursor */
+.cur{position:fixed;width:5px;height:5px;background:var(--ink);border-radius:50%;pointer-events:none;z-index:9990;transform:translate(-50%,-50%);transition:width .35s cubic-bezier(.65,.05,.36,1),height .35s,background .3s,opacity .3s;mix-blend-mode:difference;will-change:transform}
+.cur.xl{width:62px;height:62px}
+.cur-r{position:fixed;width:38px;height:38px;border:1px solid rgba(14,14,12,.22);border-radius:50%;pointer-events:none;z-index:9989;transform:translate(-50%,-50%);will-change:transform;transition:border-color .3s}
+.cur-r.dark{border-color:rgba(242,235,221,.3)}
+@media(hover:none){.cur,.cur-r{display:none}body,button,a{cursor:auto}}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.6rem 2.2rem;display:flex;justify-content:space-between;align-items:center;mix-blend-mode:difference;color:var(--cream);transition:padding .4s cubic-bezier(.65,.05,.36,1)}
+.nav.sm{padding:1rem 2.2rem}
+.nav-l{font-family:var(--serif);font-size:1.05rem;font-weight:400;letter-spacing:-.018em;display:flex;align-items:center;gap:.18rem;font-variation-settings:"opsz" 96}
+.nav-l i{font-style:italic;color:var(--terra);font-weight:300}
+.nav-u{display:flex;gap:2.2rem;list-style:none;align-items:center}
+.nav-u a{font-family:var(--mono);font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;opacity:.55;transition:opacity .35s ease;display:flex;align-items:center;gap:.5rem}
+.nav-u a::before{content:attr(data-n);font-size:.42rem;opacity:.55}
+.nav-u a:hover{opacity:1}
+.nav-cta{font-family:var(--mono);font-size:.5rem;letter-spacing:.3em;text-transform:uppercase;border:1px solid currentColor;padding:.65rem 1.1rem;display:inline-flex;align-items:center;gap:.5rem;transition:background .3s,color .3s}
+.nav-cta:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.nav-ham{display:none;width:28px;height:18px;position:relative}
+.nav-ham span{display:block;position:absolute;left:0;width:100%;height:1px;background:currentColor;transition:transform .35s,top .35s}
+.nav-ham span:nth-child(1){top:5px}
+.nav-ham span:nth-child(2){top:13px}
+.nav-ham.open span:nth-child(1){top:9px;transform:rotate(45deg)}
+.nav-ham.open span:nth-child(2){top:9px;transform:rotate(-45deg)}
+#mob{position:fixed;inset:0;background:var(--cream);z-index:190;display:none;flex-direction:column;align-items:center;justify-content:center;gap:1.2rem}
+#mob.open{display:flex}
+#mob a{font-family:var(--serif);font-size:2.4rem;font-style:italic;font-weight:300;color:var(--ink);font-variation-settings:"opsz" 144}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;height:100svh;width:100%;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0;background:var(--cream)}
+#hero-c{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:.55;mix-blend-mode:multiply}
+.hero-bar{position:absolute;top:0;left:0;right:0;padding:5.5rem 2.2rem 0;display:flex;justify-content:space-between;align-items:center;z-index:5;font-family:var(--mono);font-size:.5rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft);pointer-events:none;flex-wrap:wrap;gap:.6rem}
+.hero-bar > div{display:flex;align-items:center;gap:.6rem}
+.hero-bar .dot{width:5px;height:5px;background:var(--terra);border-radius:50%;animation:pulse 2.4s ease-in-out infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(.85)}50%{opacity:1;transform:scale(1.4)}}
+.hero-w{position:relative;z-index:3;padding:0 2.2rem .8rem;width:100%}
+.hero-eb{font-family:var(--mono);font-size:.55rem;letter-spacing:.42em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:1.2rem;display:flex;align-items:center;gap:.7rem}
+.hero-eb::before{content:"";width:24px;height:1px;background:currentColor}
+.hero-h{font-family:var(--serif);font-weight:300;line-height:.84;letter-spacing:-.06em;color:var(--ink);font-size:clamp(4.5rem,21.5vw,21rem);font-variation-settings:"opsz" 144;display:block}
+.hero-h .ww{display:inline-block;font-style:italic}
+.hero-h .ww b{font-style:normal;font-weight:300}
+.hero-h .ww i{font-style:normal;color:var(--terra);font-weight:300;display:inline-block;transform:translateY(-.04em)}
+.hero-h .ltr{display:inline-block;will-change:transform;transition:transform .25s cubic-bezier(.16,1,.3,1)}
+.hero-meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:1.6rem;padding:1.4rem 0 1rem;border-top:var(--line);flex-wrap:wrap;gap:1rem}
+.hero-meta-l{font-family:var(--mono);font-size:.5rem;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-soft);max-width:340px;line-height:2.1}
+.hero-meta-l b{color:var(--ink);font-weight:500}
+.hero-meta-r{font-family:var(--mono);font-size:.5rem;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-soft);text-align:right;line-height:2.1}
+.hero-meta-r b{color:var(--ink);font-weight:500}
+.hero-services{display:flex;justify-content:space-between;padding:1rem 2.2rem 1.4rem;font-family:var(--mono);font-size:.48rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft);position:relative;z-index:3;border-top:var(--line)}
+.hero-services span{flex:1;text-align:center;border-right:var(--line);padding:.4rem .5rem;display:flex;align-items:center;justify-content:center;gap:.4rem}
+.hero-services span:first-child{text-align:left;justify-content:flex-start}
+.hero-services span:last-child{text-align:right;border-right:0;justify-content:flex-end}
+.hero-services span em{font-style:normal;color:var(--ink-mute);font-size:.42rem}
+
+/* Marquee */
+.mq{padding:2.2rem 0;background:var(--ink);color:var(--cream);overflow:hidden;border-top:1px solid rgba(242,235,221,.05);border-bottom:1px solid rgba(242,235,221,.05);position:relative}
+.mq-t{display:flex;gap:3.4rem;white-space:nowrap;animation:mq 36s linear infinite;will-change:transform}
+.mq-i{display:flex;align-items:center;gap:3.4rem;font-family:var(--serif);font-size:clamp(2.4rem,5.2vw,5rem);font-weight:300;font-style:italic;letter-spacing:-.03em;font-variation-settings:"opsz" 144}
+.mq-i em{font-style:normal;font-weight:400;color:var(--terra)}
+.mq-i s{text-decoration:none;font-family:var(--mono);font-size:.55rem;font-style:normal;letter-spacing:.4em;text-transform:uppercase;color:rgba(242,235,221,.32)}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Manifesto */
+.manif{padding:7rem 2.2rem;border-bottom:var(--line)}
+.manif-w{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:1fr 2.4fr;gap:4rem;align-items:start}
+.manif-l{font-family:var(--mono);font-size:.5rem;letter-spacing:.42em;text-transform:uppercase;color:var(--ink-soft);position:sticky;top:6rem}
+.manif-q{font-family:var(--serif);font-size:clamp(1.7rem,3.8vw,3.4rem);font-weight:300;line-height:1.2;letter-spacing:-.02em;color:var(--ink);font-variation-settings:"opsz" 144}
+.manif-q em{font-style:italic;font-weight:300;color:var(--terra)}
+.manif-q .acc{font-style:italic;font-weight:300;background:linear-gradient(180deg,transparent 60%,rgba(184,70,46,.18) 60%);padding:0 .1em}
+
+/* Section shells */
+.sec-w{max-width:1380px;margin:0 auto;width:100%}
+.lbl{font-family:var(--mono);font-size:.5rem;letter-spacing:.42em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:.8rem;margin-bottom:2.5rem}
+.lbl::before{content:"";width:24px;height:1px;background:currentColor}
+.lbl.lt{color:rgba(242,235,221,.5)}.lbl.lt::before{background:rgba(242,235,221,.5)}
+.h-display{font-family:var(--serif);font-weight:300;line-height:.96;letter-spacing:-.038em;color:var(--ink);font-variation-settings:"opsz" 144}
+.h-display em{font-style:italic;font-weight:300;color:var(--terra)}
+.h-display.lt{color:var(--cream)}
+.h-l{font-size:clamp(2.5rem,5.4vw,5.2rem)}
+
+/* Services */
+.svc{background:var(--ink);color:var(--cream);padding:8rem 2.2rem 9rem;position:relative}
+.svc-h{font-family:var(--serif);font-size:clamp(2.4rem,5.4vw,5.2rem);font-weight:300;line-height:.96;letter-spacing:-.038em;margin-bottom:5rem;max-width:18ch;font-variation-settings:"opsz" 144}
+.svc-h em{font-style:italic;font-weight:300;color:var(--terra)}
+.svc-l{border-top:1px solid rgba(242,235,221,.14);max-width:1380px;margin:0 auto}
+.svc-i{display:grid;grid-template-columns:60px 1.4fr 2fr 80px;gap:2rem;padding:3.2rem 0;border-bottom:1px solid rgba(242,235,221,.14);align-items:start;cursor:none;transition:padding-left .55s cubic-bezier(.65,.05,.36,1);position:relative;overflow:hidden}
+.svc-i::before{content:"";position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(90deg,rgba(184,70,46,.08),transparent 65%);transform:scaleX(0);transform-origin:left;transition:transform .65s cubic-bezier(.65,.05,.36,1);pointer-events:none}
+.svc-i:hover{padding-left:1.4rem}
+.svc-i:hover::before{transform:scaleX(1)}
+.svc-n{font-family:var(--mono);font-size:.55rem;letter-spacing:.28em;color:rgba(242,235,221,.5);padding-top:.6rem}
+.svc-t{font-family:var(--serif);font-size:clamp(1.85rem,3.4vw,3.2rem);font-weight:400;line-height:.98;letter-spacing:-.025em;color:var(--cream);transition:color .35s;font-variation-settings:"opsz" 96}
+.svc-i:hover .svc-t{color:var(--terra)}
+.svc-d{font-size:.78rem;line-height:1.85;color:rgba(242,235,221,.6);max-width:48ch;padding-top:.4rem}
+.svc-d strong{color:var(--cream);font-weight:500}
+.svc-tags{margin-top:1.3rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.svc-tag{font-family:var(--mono);font-size:.45rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(242,235,221,.45);border:1px solid rgba(242,235,221,.16);padding:.32rem .7rem;transition:color .3s,border-color .3s}
+.svc-i:hover .svc-tag{color:rgba(242,235,221,.8);border-color:rgba(242,235,221,.34)}
+.svc-a{font-family:var(--mono);font-size:.5rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream);text-align:right;padding-top:.55rem;display:flex;align-items:center;justify-content:flex-end;gap:.4rem;opacity:.55;transition:opacity .35s,transform .35s}
+.svc-i:hover .svc-a{opacity:1;transform:translate(2px,-2px);color:var(--terra)}
+
+/* Work */
+#work{background:var(--paper);padding:8rem 2.2rem}
+.wk-h{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:end;margin:0 auto 4.5rem;max-width:1380px}
+.wk-h h2{font-family:var(--serif);font-size:clamp(2.5rem,5.4vw,5.2rem);font-weight:300;line-height:.96;letter-spacing:-.035em;font-variation-settings:"opsz" 144}
+.wk-h h2 em{font-style:italic;font-weight:300;color:var(--terra)}
+.wk-h p{font-size:.85rem;line-height:1.85;color:var(--ink-soft);max-width:38ch}
+.wk-g{display:grid;grid-template-columns:repeat(12,1fr);gap:1.4rem;max-width:1380px;margin:0 auto}
+.wk-i{position:relative;cursor:none;overflow:hidden;display:flex;flex-direction:column}
+.wk-i.w7{grid-column:span 7}.wk-i.w5{grid-column:span 5}
+.wk-i.w8{grid-column:span 8}.wk-i.w4{grid-column:span 4}
+.wk-i.w6{grid-column:span 6}
+.wk-img{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--cream-3)}
+.wk-i.w7 .wk-img,.wk-i.w8 .wk-img{aspect-ratio:16/10}
+.wk-i.w5 .wk-img,.wk-i.w4 .wk-img{aspect-ratio:4/5}
+.wk-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.16,1,.3,1),filter 1.2s;filter:saturate(.7) contrast(.96) brightness(.97)}
+.wk-i:hover .wk-img img{transform:scale(1.045);filter:saturate(1) contrast(1) brightness(1)}
+.wk-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(14,14,12,.55) 100%);opacity:.4;transition:opacity .55s}
+.wk-i:hover .wk-img::after{opacity:.65}
+.wk-meta{padding:1.3rem 0 0;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.wk-cat{font-family:var(--mono);font-size:.46rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.5rem}
+.wk-t{font-family:var(--serif);font-size:clamp(1.15rem,1.85vw,1.55rem);font-weight:400;font-style:italic;line-height:1.2;color:var(--ink);font-variation-settings:"opsz" 96}
+.wk-y{font-family:var(--mono);font-size:.46rem;letter-spacing:.28em;color:var(--ink-soft);padding-top:.4rem}
+
+/* Stats */
+.stats{background:var(--cream);padding:0;border-top:var(--line);border-bottom:var(--line)}
+.stats-w{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:3rem 1.6rem;border-right:var(--line);text-align:left;position:relative;overflow:hidden}
+.stat:last-child{border-right:0}
+.stat::after{content:"";position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--terra);transition:width .8s cubic-bezier(.65,.05,.36,1)}
+.stat:hover::after{width:100%}
+.stat-n{font-family:var(--serif);font-size:clamp(2.6rem,4.4vw,4.2rem);font-weight:300;line-height:1;color:var(--ink);margin-bottom:.5rem;font-variation-settings:"opsz" 144;display:flex;align-items:flex-start;gap:.2em}
+.stat-n sup{font-size:.45em;font-style:normal;color:var(--terra);font-family:var(--mono);font-weight:400;letter-spacing:.05em;padding-top:.3em}
+.stat-n em{font-style:italic;font-weight:300;color:var(--terra)}
+.stat-l{font-family:var(--mono);font-size:.5rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-soft);max-width:18ch}
+
+/* About */
+.abt{background:var(--paper);padding:8rem 2.2rem}
+.abt-w{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:5fr 6fr;gap:5.5rem;align-items:start}
+.abt-h{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,4.6rem);font-weight:300;line-height:1;letter-spacing:-.035em;color:var(--ink);margin-bottom:2.4rem;font-variation-settings:"opsz" 144}
+.abt-h em{font-style:italic;font-weight:300;color:var(--terra)}
+.abt-q{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.45rem);font-weight:400;font-style:italic;line-height:1.5;color:var(--ink);border-left:2px solid var(--terra);padding-left:1.4rem;margin-bottom:2.4rem;font-variation-settings:"opsz" 96}
+.abt-b{font-size:.82rem;line-height:1.95;color:var(--ink-soft)}
+.abt-b p{margin-bottom:1.3rem}
+.abt-b strong{color:var(--ink);font-weight:500}
+.fdrs{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3rem}
+.fdr{border-top:var(--line);padding-top:1.2rem}
+.fdr-n{font-family:var(--serif);font-size:1.7rem;font-weight:400;font-style:italic;color:var(--ink);margin-bottom:.25rem;font-variation-settings:"opsz" 96}
+.fdr-r{font-family:var(--mono);font-size:.5rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft)}
+.abt-img{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:var(--ink-2)}
+.abt-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.78) contrast(1.02)}
+.abt-cap{position:absolute;left:1.2rem;bottom:1.2rem;font-family:var(--mono);font-size:.46rem;letter-spacing:.32em;text-transform:uppercase;color:var(--cream)}
+.abt-cap::before{content:"";display:inline-block;width:18px;height:1px;background:var(--cream);margin-right:.6rem;vertical-align:middle}
+
+/* Journal */
+.jrn{background:var(--cream);padding:8rem 2.2rem;border-top:var(--line)}
+.jrn-h{display:flex;justify-content:space-between;align-items:end;max-width:1380px;margin:0 auto 4rem;flex-wrap:wrap;gap:1rem}
+.jrn-h h2{font-family:var(--serif);font-size:clamp(2.3rem,4.8vw,4.4rem);font-weight:300;line-height:.96;letter-spacing:-.035em;font-variation-settings:"opsz" 144}
+.jrn-h h2 em{font-style:italic;font-weight:300;color:var(--terra)}
+.jrn-h a{font-family:var(--mono);font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:.32rem;transition:color .3s,border-color .3s}
+.jrn-h a:hover{color:var(--terra);border-color:var(--terra)}
+.jrn-g{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;max-width:1380px;margin:0 auto}
+.jrn-c{padding:1.4rem 0 0;border-top:1px solid rgba(14,14,12,.18);position:relative;cursor:none}
+.jrn-c::before{content:"";position:absolute;top:0;left:0;width:0;height:1px;background:var(--terra);transition:width .65s cubic-bezier(.65,.05,.36,1)}
+.jrn-c:hover::before{width:100%}
+.jrn-meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.45rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.9rem}
+.jrn-t{font-family:var(--serif);font-size:clamp(1.25rem,1.95vw,1.75rem);font-weight:400;line-height:1.2;letter-spacing:-.014em;color:var(--ink);margin-bottom:1.1rem;font-variation-settings:"opsz" 96;transition:color .35s}
+.jrn-c:hover .jrn-t{color:var(--terra)}
+.jrn-d{font-size:.74rem;line-height:1.85;color:var(--ink-soft);margin-bottom:1.6rem}
+.jrn-r{font-family:var(--mono);font-size:.45rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:.5rem;transition:color .35s}
+.jrn-c:hover .jrn-r{color:var(--terra)}
+
+/* Contact */
+#contact{background:var(--ink);color:var(--cream);padding:8rem 2.2rem;position:relative;overflow:hidden}
+#contact::after{content:"e.";position:absolute;bottom:-13rem;right:-2rem;font-family:var(--serif);font-size:clamp(20rem,38vw,40rem);font-weight:300;font-style:italic;color:rgba(242,235,221,.04);line-height:1;pointer-events:none;font-variation-settings:"opsz" 144}
+.ct-w{max-width:1380px;margin:0 auto;position:relative;z-index:1}
+.ct-grid{display:grid;grid-template-columns:5fr 6fr;gap:5rem;align-items:start}
+.ct-h{font-family:var(--serif);font-size:clamp(3rem,7.4vw,7.4rem);font-weight:300;line-height:.92;letter-spacing:-.04em;color:var(--cream);margin-bottom:2.4rem;font-variation-settings:"opsz" 144}
+.ct-h em{font-style:italic;font-weight:300;color:var(--terra)}
+.ct-sub{font-family:var(--mono);font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(242,235,221,.5);margin-bottom:3rem;line-height:2.2;max-width:38ch}
+.ct-pts{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(242,235,221,.14)}
+.ct-pt{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(242,235,221,.14);padding:1.2rem 0;gap:1rem}
+.ct-pt-l{font-family:var(--mono);font-size:.5rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(242,235,221,.5)}
+.ct-pt-v{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--cream);font-variation-settings:"opsz" 96}
+.ct-pt-v a{transition:color .3s}.ct-pt-v a:hover{color:var(--terra)}
+.ct-f{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(242,235,221,.14)}
+.ct-fg{display:flex;flex-direction:column;border-bottom:1px solid rgba(242,235,221,.14);padding:1.5rem 0}
+.ct-fg.full{grid-column:span 2}
+.ct-fg.half:first-of-type{border-right:1px solid rgba(242,235,221,.14);padding-right:1.4rem}
+.ct-fg.half:nth-of-type(2){padding-left:1.4rem}
+.ct-fg label{font-family:var(--mono);font-size:.45rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(242,235,221,.45);margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
+.ct-fg label em{font-style:normal;color:var(--terra);opacity:.7}
+.ct-fg input,.ct-fg textarea,.ct-fg select{background:transparent;border:none;padding:0;font-family:var(--serif);font-size:1.05rem;color:var(--cream);outline:none;resize:none;width:100%;font-style:italic;font-weight:400;font-variation-settings:"opsz" 36}
+.ct-fg input::placeholder,.ct-fg textarea::placeholder{color:rgba(242,235,221,.28);font-style:italic}
+.ct-fg select{appearance:none;cursor:none;background-image:linear-gradient(45deg,transparent 50%,rgba(242,235,221,.5) 50%),linear-gradient(135deg,rgba(242,235,221,.5) 50%,transparent 50%);background-position:calc(100% - 12px) 50%,calc(100% - 7px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:24px}
+.ct-fg select option{background:var(--ink);color:var(--cream);font-style:normal}
+.ct-btn{grid-column:span 2;background:transparent;border:none;border-bottom:1px solid rgba(242,235,221,.14);padding:1.7rem 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:.6rem;letter-spacing:.36em;text-transform:uppercase;color:var(--cream);transition:color .35s,background .35s,padding .35s}
+.ct-btn:hover{color:var(--terra);padding-left:1rem}
+.ct-btn b{font-weight:400;display:flex;align-items:center;gap:.4rem}
+.ct-btn b::before{content:"06";font-size:.46rem;letter-spacing:.32em;opacity:.4}
+.ct-btn span:last-child{font-size:1.4rem;letter-spacing:0;transition:transform .35s}
+.ct-btn:hover span:last-child{transform:translateX(.6rem)}
+.ct-msg{grid-column:span 2;font-family:var(--mono);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:.8rem 0;opacity:0;transition:opacity .5s}
+.ct-msg.show{opacity:1}.ct-msg.ok{color:var(--terra)}.ct-msg.er{color:#FF6B4A}
+
+/* Footer */
+footer{background:var(--ink);color:rgba(242,235,221,.4);padding:1.8rem 2.2rem;border-top:1px solid rgba(242,235,221,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.46rem;letter-spacing:.3em;text-transform:uppercase}
+footer a{transition:color .3s}
+footer a:hover{color:var(--cream)}
+footer span:first-child{color:rgba(242,235,221,.55)}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(40px)}
+.rv.on{opacity:1;transform:none;transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+
+/* Mobile */
+@media (max-width:980px){
+  .nav{padding:1.1rem 1.2rem}.nav.sm{padding:.9rem 1.2rem}
+  .nav-u,.nav-cta{display:none}.nav-ham{display:block}
+  .hero-bar{padding:4rem 1.2rem 0}
+  .hero-w{padding:0 1.2rem .8rem}
+  .hero-services{padding:.8rem 1.2rem 1.2rem;flex-wrap:wrap;gap:.5rem;border:0}
+  .hero-services span{flex:1 1 28%;border-right:0;border-bottom:var(--line);text-align:left;justify-content:flex-start}
+  .svc,#work,.abt,.jrn,.manif,#contact{padding:5rem 1.2rem}
+  .manif-w{grid-template-columns:1fr;gap:1.5rem}.manif-l{position:static}
+  .svc-i{grid-template-columns:34px 1fr;gap:1rem;padding:2.4rem 0}
+  .svc-i div:nth-child(3),.svc-a{grid-column:2;padding-top:0}
+  .svc-i:hover{padding-left:0}
+  .wk-h{grid-template-columns:1fr;gap:2rem}
+  .wk-g{grid-template-columns:1fr;gap:2rem}
+  .wk-i.w7,.wk-i.w5,.wk-i.w8,.wk-i.w4,.wk-i.w6{grid-column:span 1}
+  .stats-w{grid-template-columns:repeat(2,1fr)}
+  .stat{border-bottom:var(--line)}
+  .stat:nth-child(2){border-right:0}
+  .abt-w{grid-template-columns:1fr;gap:3rem}
+  .jrn-g{grid-template-columns:1fr;gap:1rem}
+  .ct-grid{grid-template-columns:1fr;gap:3rem}
+  .ct-fg.half{grid-column:span 2;border-right:0!important;padding:1.5rem 0!important}
+  footer{flex-direction:column;align-items:flex-start;gap:.6rem}
+}
+</style>
+</head>
+<body>
+
+<div class="cur"></div><div class="cur-r"></div>
+
+<div id="ld">
+  <div class="ld-w">evverywhere</div>
+  <div class="ld-l"></div>
+  <div class="ld-c">Cape Town · Est. 2024</div>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav-l">evverywhere<i>.</i></a>
+  <ul class="nav-u">
+    <li><a href="#work" data-n="01">Work</a></li>
+    <li><a href="#services" data-n="02">Services</a></li>
+    <li><a href="#about" data-n="03">Studio</a></li>
+    <li><a href="#journal" data-n="04">Journal</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Start a Brief <span>→</span></a>
+  <button class="nav-ham" id="ham" aria-label="Menu"><span></span><span></span></button>
+</header>
+<nav id="mob">
+  <a href="#work">Work</a><a href="#services">Services</a><a href="#about">Studio</a><a href="#journal">Journal</a><a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<section class="hero" id="top">
+  <canvas id="hero-c"></canvas>
+  <div class="hero-bar">
+    <div><span class="dot"></span><span>Available · Q3 2026</span></div>
+    <div id="ct-time">Cape Town · — · — · —</div>
+    <div>33.9°S / 18.4°E</div>
+  </div>
+  <div class="hero-w">
+    <div class="hero-eb">A Cape Town Creative Studio · Est. 2024</div>
+    <h1 class="hero-h" aria-label="evverywhere — Cape Town Creative Studio">
+      <span class="ww" id="ww"><span class="ltr"><b>e</b></span><span class="ltr">v</span><span class="ltr">v</span><span class="ltr">e</span><span class="ltr">r</span><span class="ltr">y</span><span class="ltr">w</span><span class="ltr">h</span><span class="ltr">e</span><span class="ltr">r</span><span class="ltr">e</span><span class="ltr"><i>.</i></span></span>
+    </h1>
+    <div class="hero-meta">
+      <p class="hero-meta-l"><b>An independent creative studio</b> building world-class brand systems for ambitious companies — from Cape Town to everywhere.</p>
+      <p class="hero-meta-r"><b>Daniel · Lliam</b><br/>Founder-led · Independent<br/>10-day brief to delivery</p>
+    </div>
+  </div>
+  <div class="hero-services">
+    <span><em>01</em> Strategy</span>
+    <span><em>02</em> Paid Media</span>
+    <span><em>03</em> Creative Content</span>
+    <span><em>04</em> Business Analysis</span>
+    <span><em>05</em> Web Development</span>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true">
+  <div class="mq-t">
+    <div class="mq-i">Strategy <s>—</s> <em>Paid Advertising</em> <s>—</s> Creative Media <s>—</s> Business Analysis <s>—</s> <em>Website Development</em> <s>—</s> </div>
+    <div class="mq-i">Strategy <s>—</s> <em>Paid Advertising</em> <s>—</s> Creative Media <s>—</s> Business Analysis <s>—</s> <em>Website Development</em> <s>—</s> </div>
+  </div>
+</div>
+
+<section class="manif rv">
+  <div class="manif-w">
+    <div class="manif-l">[ Our Belief ]</div>
+    <p class="manif-q">The best brands aren't just <em>seen</em>. They're <span class="acc">felt.</span> We build the creative systems that make that happen — strategy, story and screen — from <em>Cape Town</em> to everywhere.</p>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="sec-w">
+    <div class="lbl lt">[ What we do ]</div>
+    <h2 class="svc-h rv">Five disciplines.<br/>One <em>creative</em> operating system.</h2>
+  </div>
+  <div class="svc-l">
+    <a class="svc-i rv" href="#contact">
+      <div class="svc-n">01</div>
+      <div class="svc-t">Strategy<br/>creation</div>
+      <div>
+        <p class="svc-d">Audience mapping, competitor intelligence, editorial architecture, go-to-market frameworks. Strategy is the operating system for everything your brand does — <strong>not the deck nobody reads.</strong></p>
+        <div class="svc-tags"><span class="svc-tag">Brand positioning</span><span class="svc-tag">Audience mapping</span><span class="svc-tag">GTM</span><span class="svc-tag">Competitive intel</span></div>
+      </div>
+      <div class="svc-a">Brief us <span>↗</span></div>
+    </a>
+    <a class="svc-i rv" href="#contact">
+      <div class="svc-n">02</div>
+      <div class="svc-t">Paid<br/>advertising</div>
+      <div>
+        <p class="svc-d">Performance marketing that converts. Full-funnel campaigns across Meta, Google, TikTok and LinkedIn — creative testing, audience refinement and transparent reporting. <strong>Every rand spent, accounted for.</strong></p>
+        <div class="svc-tags"><span class="svc-tag">Meta</span><span class="svc-tag">Google</span><span class="svc-tag">TikTok</span><span class="svc-tag">LinkedIn</span><span class="svc-tag">Optimisation</span></div>
+      </div>
+      <div class="svc-a">Brief us <span>↗</span></div>
+    </a>
+    <a class="svc-i rv" href="#contact">
+      <div class="svc-n">03</div>
+      <div class="svc-t">Creative media<br/>content</div>
+      <div>
+        <p class="svc-d">Full-spectrum production — photography, videography, motion graphics, social content and campaign assets. Delivered within <strong>10 days of brief.</strong></p>
+        <div class="svc-tags"><span class="svc-tag">Photography</span><span class="svc-tag">Videography</span><span class="svc-tag">Motion</span><span class="svc-tag">Social</span><span class="svc-tag">10-day delivery</span></div>
+      </div>
+      <div class="svc-a">Brief us <span>↗</span></div>
+    </a>
+    <a class="svc-i rv" href="#contact">
+      <div class="svc-n">04</div>
+      <div class="svc-t">Business<br/>analysis</div>
+      <div>
+        <p class="svc-d">Operations, market position, digital presence and growth levers — delivered as actionable intelligence. <strong>We diagnose, then we build.</strong></p>
+        <div class="svc-tags"><span class="svc-tag">SWOT</span><span class="svc-tag">Market research</span><span class="svc-tag">Growth modelling</span><span class="svc-tag">Audits</span></div>
+      </div>
+      <div class="svc-a">Brief us <span>↗</span></div>
+    </a>
+    <a class="svc-i rv" href="#contact">
+      <div class="svc-n">05</div>
+      <div class="svc-t">Website<br/>development</div>
+      <div>
+        <p class="svc-d">Custom sites and digital platforms built to convert — landing pages to full e-commerce. Performance-optimised, world-class in appearance and function. <strong>Beauty is not optional.</strong></p>
+        <div class="svc-tags"><span class="svc-tag">Custom design</span><span class="svc-tag">E-commerce</span><span class="svc-tag">CMS</span><span class="svc-tag">Performance</span></div>
+      </div>
+      <div class="svc-a">Brief us <span>↗</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wk-h">
+    <h2 class="rv">The work tells the story of <em>who we are.</em></h2>
+    <p class="rv">A select cross-section of recent strategy, paid, content and platform builds — for emerging brands, mid-market scale-ups, and a few names you'd recognise.</p>
+  </div>
+  <div class="wk-g">
+    <article class="wk-i w7 rv">
+      <div class="wk-img"><img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1400&q=85&auto=format&fit=crop" alt="Social strategy and paid media campaign by evverywhere" referrerpolicy="no-referrer" loading="lazy"/></div>
+      <div class="wk-meta">
+        <div><div class="wk-cat">Brand · Strategy · Paid</div><h3 class="wk-t">Social strategy that builds culture.</h3></div>
+        <div class="wk-y">2026</div>
+      </div>
+    </article>
+    <article class="wk-i w5 rv" style="transition-delay:.07s">
+      <div class="wk-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=85&auto=format&fit=crop" alt="Business analysis and growth modelling work" referrerpolicy="no-referrer" loading="lazy"/></div>
+      <div class="wk-meta">
+        <div><div class="wk-cat">Business analysis</div><h3 class="wk-t">Strategy buried in the data.</h3></div>
+        <div class="wk-y">2025</div>
+      </div>
+    </article>
+    <article class="wk-i w4 rv">
+      <div class="wk-img"><img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=85&auto=format&fit=crop" alt="Editorial photography content production" referrerpolicy="no-referrer" loading="lazy"/></div>
+      <div class="wk-meta">
+        <div><div class="wk-cat">Photo · Video · Motion</div><h3 class="wk-t">Content that stops scrolls.</h3></div>
+        <div class="wk-y">2026</div>
+      </div>
+    </article>
+    <article class="wk-i w8 rv" style="transition-delay:.05s">
+      <div class="wk-img"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1400&q=85&auto=format&fit=crop" alt="Custom website development project" referrerpolicy="no-referrer" loading="lazy"/></div>
+      <div class="wk-meta">
+        <div><div class="wk-cat">Web · Design · Build</div><h3 class="wk-t">A platform built to convert — and to feel.</h3></div>
+        <div class="wk-y">2026</div>
+      </div>
+    </article>
+    <article class="wk-i w6 rv">
+      <div class="wk-img"><img src="https://images.unsplash.com/photo-1504198266287-1659872e6590?w=1200&q=85&auto=format&fit=crop" alt="Brand identity and typography system" referrerpolicy="no-referrer" loading="lazy"/></div>
+      <div class="wk-meta">
+        <div><div class="wk-cat">Identity · Type · System</div><h3 class="wk-t">An identity built to outlast a trend cycle.</h3></div>
+        <div class="wk-y">2025</div>
+      </div>
+    </article>
+    <article class="wk-i w6 rv" style="transition-delay:.07s">
+      <div class="wk-img"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85&auto=format&fit=crop" alt="Editorial print and campaign system" referrerpolicy="no-referrer" loading="lazy"/></div>
+      <div class="wk-meta">
+        <div><div class="wk-cat">Editorial · Strategy · Print</div><h3 class="wk-t">A magazine-grade campaign system.</h3></div>
+        <div class="wk-y">2026</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="stats" aria-label="By the numbers">
+  <div class="stats-w">
+    <div class="stat rv"><div class="stat-n">10<sup>DAY</sup></div><div class="stat-l">Brief to delivery</div></div>
+    <div class="stat rv"><div class="stat-n">5</div><div class="stat-l">Disciplines, one studio</div></div>
+    <div class="stat rv"><div class="stat-n"><em>∞</em></div><div class="stat-l">Platforms supported</div></div>
+    <div class="stat rv"><div class="stat-n">2024</div><div class="stat-l">Built for the new economy</div></div>
+  </div>
+</section>
+
+<section class="abt" id="about">
+  <div class="abt-w">
+    <div>
+      <div class="lbl">[ The studio ]</div>
+      <h2 class="abt-h rv">Creative strategy.<br/>Global standard.<br/><em>Cape Town built.</em></h2>
+      <p class="abt-q rv">"World-class creative work doesn't require a Johannesburg postcode or a London agency behind it."</p>
+      <div class="abt-b rv">
+        <p>evverywhere is a Cape Town creative studio built for brands that refuse to be contained by category, geography, or convention.</p>
+        <p>We deliver <strong>strategy, paid advertising, creative media, business analysis</strong> and <strong>website development</strong> as a single coherent creative system — not five disconnected vendors stitched together by an account manager.</p>
+        <p>We are structured to move fast: full media content packages in <strong>10 days from brief.</strong> No bloat. No delays. Just work that lands.</p>
+      </div>
+      <div class="fdrs rv">
+        <div class="fdr"><div class="fdr-n">Daniel</div><div class="fdr-r">Strategy &amp; Growth</div></div>
+        <div class="fdr"><div class="fdr-n">Lliam</div><div class="fdr-r">Creative Direction</div></div>
+      </div>
+    </div>
+    <figure class="abt-img rv" style="transition-delay:.15s">
+      <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=1100&q=90&auto=format&fit=crop" alt="Cape Town from above at dusk" referrerpolicy="no-referrer" loading="lazy"/>
+      <figcaption class="abt-cap">Cape Town · 33.9°S</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="jrn" id="journal">
+  <div class="jrn-h">
+    <h2 class="rv">Notes from the <em>studio.</em></h2>
+    <a href="#contact" class="rv">Get in touch ↗</a>
+  </div>
+  <div class="jrn-g">
+    <article class="jrn-c rv">
+      <div class="jrn-meta"><span>Issue 03 · Strategy</span><span>April 2026</span></div>
+      <h3 class="jrn-t">Why most "brand strategy" decks die in the drawer.</h3>
+      <p class="jrn-d">Strategy that doesn't change behaviour isn't strategy — it's homework. The fix is shorter, sharper, and more uncomfortable than most agencies will admit.</p>
+      <div class="jrn-r">Read · 6 min <span>↗</span></div>
+    </article>
+    <article class="jrn-c rv" style="transition-delay:.06s">
+      <div class="jrn-meta"><span>Issue 02 · Paid Media</span><span>March 2026</span></div>
+      <h3 class="jrn-t">A creative-first approach to performance ads.</h3>
+      <p class="jrn-d">The most underused performance lever isn't bidding — it's the work itself. Notes on building paid systems the algorithm and the audience both reward.</p>
+      <div class="jrn-r">Read · 9 min <span>↗</span></div>
+    </article>
+    <article class="jrn-c rv" style="transition-delay:.12s">
+      <div class="jrn-meta"><span>Issue 01 · Studio</span><span>February 2026</span></div>
+      <h3 class="jrn-t">Cape Town is the most overlooked creative capital in the world.</h3>
+      <p class="jrn-d">A short letter on why building a global-standard agency from this city is a strategic advantage, not a compromise.</p>
+      <div class="jrn-r">Read · 4 min <span>↗</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="ct-w">
+    <div class="ct-grid">
+      <div>
+        <div class="lbl lt">[ Start a brief ]</div>
+        <h2 class="ct-h rv">Let's build something <em>everywhere.</em></h2>
+        <p class="ct-sub rv">Tell us about your brand, your audience and what you're trying to make happen. We come back within one working day.</p>
+        <div class="ct-pts rv">
+          <div class="ct-pt"><span class="ct-pt-l">Email</span><span class="ct-pt-v"><a href="mailto:hello@evverywhere.com">hello@evverywhere.com</a></span></div>
+          <div class="ct-pt"><span class="ct-pt-l">Studio</span><span class="ct-pt-v">Cape Town, ZA</span></div>
+          <div class="ct-pt"><span class="ct-pt-l">Instagram</span><span class="ct-pt-v"><a href="https://instagram.com/The.evverywhere" target="_blank" rel="noopener">@The.evverywhere</a></span></div>
+        </div>
+      </div>
+      <form id="ctF" class="ct-f rv" action="https://formsubmit.co/ajax/hello@evverywhere.com" method="POST">
+        <input type="hidden" name="_subject" value="New Enquiry from evverywhere.com"/>
+        <input type="hidden" name="_template" value="table"/>
+        <input type="hidden" name="_captcha" value="false"/>
+        <input type="text" name="_honey" style="display:none" tabindex="-1"/>
+        <div class="ct-fg half"><label><em>01</em> Your name</label><input type="text" name="name" placeholder="Jane Mokoena" required/></div>
+        <div class="ct-fg half"><label><em>02</em> Email</label><input type="email" name="email" placeholder="jane@yourbrand.com" required/></div>
+        <div class="ct-fg full"><label><em>03</em> Brand / Company</label><input type="text" name="brand" placeholder="The brand we're discussing"/></div>
+        <div class="ct-fg full"><label><em>04</em> What are you working on?</label><select name="service"><option>I'm not sure yet</option><option>Strategy</option><option>Paid advertising</option><option>Creative media content</option><option>Business analysis</option><option>Website development</option><option>The full system</option></select></div>
+        <div class="ct-fg full"><label><em>05</em> Tell us more</label><textarea name="message" rows="3" placeholder="What's the goal? What's the timeline? What does success look like?" required></textarea></div>
+        <button type="submit" class="ct-btn" id="ctB"><b id="ctBT">Send brief</b><span>→</span></button>
+        <div class="ct-msg" id="ctM"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 evverywhere · Cape Town, South Africa</span>
+  <span>Strategy · Paid · Content · Analysis · Web</span>
+  <span><a href="mailto:hello@evverywhere.com">hello@evverywhere.com</a></span>
+</footer>
+
+<script>
+/* Lenis */
+let lenis;
+if(window.Lenis){
+  lenis=new Lenis({lerp:0.13,wheelMultiplier:1.05,touchMultiplier:1.2});
+  function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
+}
+if(window.gsap&&window.ScrollTrigger){gsap.registerPlugin(ScrollTrigger);if(lenis)lenis.on('scroll',ScrollTrigger.update)}
+
+/* Loader + Hero entrance */
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.getElementById('ld').classList.add('out');
+    if(window.gsap){
+      gsap.from('.hero-eb',{duration:1.1,opacity:0,y:8,ease:'expo.out',delay:.25});
+      gsap.from('.hero-h .ltr',{duration:1.4,y:'18%',opacity:0,ease:'expo.out',delay:.4,stagger:.025});
+      gsap.from('.hero-meta-l, .hero-meta-r',{duration:1.2,y:14,opacity:0,ease:'expo.out',delay:.95,stagger:.08});
+      gsap.from('.hero-services span',{duration:1,y:10,opacity:0,ease:'expo.out',delay:1.05,stagger:.05});
+      gsap.from('.hero-bar > div',{duration:1,opacity:0,y:-6,ease:'expo.out',delay:1.15,stagger:.08});
+    }
+  },1100);
+});
+
+/* Cursor */
+(function(){
+  const d=document.querySelector('.cur'),r=document.querySelector('.cur-r');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;d.style.left=mx+'px';d.style.top=my+'px'},{passive:true});
+  document.addEventListener('mouseover',e=>{
+    const t=e.target;
+    const isLink=t.closest('a,button,.svc-i,.wk-i,.jrn-c,.stat,.spec-i,select,input,textarea');
+    d.classList.toggle('xl',!!isLink);
+    const onDark=!!t.closest('.svc,#contact,footer,.mq');
+    r.classList.toggle('dark',onDark);
+  });
+  (function loop(){rx+=(mx-rx)*.13;ry+=(my-ry)*.13;r.style.left=rx+'px';r.style.top=ry+'px';requestAnimationFrame(loop)})();
+})();
+
+/* Magnetic letters */
+(function(){
+  const ww=document.getElementById('ww');if(!ww)return;
+  const letters=[...ww.querySelectorAll('.ltr')];
+  let mx=-9999,my=-9999;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY},{passive:true});
+  function loop(){
+    letters.forEach(l=>{
+      const r=l.getBoundingClientRect();
+      const cx=r.left+r.width/2,cy=r.top+r.height/2;
+      const dx=mx-cx,dy=my-cy;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      const max=240;
+      if(d<max){const f=(1-d/max)*.18;l.style.transform=`translate(${dx*f}px,${dy*f}px)`}
+      else{l.style.transform=''}
+    });
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+/* Hero WebGL */
+(function(){
+  if(!window.THREE)return;
+  const c=document.getElementById('hero-c');
+  const W=()=>window.innerWidth,H=()=>window.innerHeight;
+  const renderer=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.setSize(W(),H());
+  const scene=new THREE.Scene();
+  const camera=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
+  const u={iTime:{value:0},iRes:{value:new THREE.Vector2(W(),H())},iMouse:{value:new THREE.Vector2(.5,.6)},cCream:{value:new THREE.Color(0xF2EBDD)},cTerra:{value:new THREE.Color(0xB8462E)},cOchre:{value:new THREE.Color(0xA77C3F)},cInk:{value:new THREE.Color(0x0E0E0C)}};
+  const mat=new THREE.ShaderMaterial({uniforms:u,
+    vertexShader:`void main(){gl_Position=vec4(position,1.);}`,
+    fragmentShader:`precision highp float;uniform float iTime;uniform vec2 iRes,iMouse;uniform vec3 cCream,cTerra,cOchre,cInk;float n(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}float sn(vec2 p){vec2 i=floor(p),f=fract(p);float a=n(i),b=n(i+vec2(1,0)),c=n(i+vec2(0,1)),d=n(i+vec2(1,1));vec2 u=f*f*(3.-2.*f);return mix(a,b,u.x)+(c-a)*u.y*(1.-u.x)+(d-b)*u.x*u.y;}void main(){vec2 uv=gl_FragCoord.xy/iRes.xy;vec2 m=iMouse;float aspect=iRes.x/iRes.y;vec2 d2=(uv-m);d2.x*=aspect;float d=length(d2);float t=iTime*.06;float v=sn(uv*2.2+t)*.55+sn(uv*5.+t*1.2)*.25+sn(uv*9.-t*.7)*.18;float halo=(1.-smoothstep(.0,.6,d))*.32;v+=halo;v+=(1.-uv.y)*.18;vec3 col=mix(cCream,cOchre,smoothstep(.45,.85,v)*.7);col=mix(col,cTerra,smoothstep(.7,1.05,v)*.55);col=mix(col,cInk,smoothstep(.95,1.15,v)*.18);col-=n(uv*iRes.xy*.5+iTime*.3)*.018;gl_FragColor=vec4(col,1.);}`
+  });
+  scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),mat));
+  let mx=.5,my=.6,tmx=.5,tmy=.6;
+  document.addEventListener('mousemove',e=>{tmx=e.clientX/W();tmy=1-e.clientY/H();},{passive:true});
+  function ani(){requestAnimationFrame(ani);mx+=(tmx-mx)*.045;my+=(tmy-my)*.045;u.iTime.value+=.016;u.iMouse.value.set(mx,my);renderer.render(scene,camera)}
+  ani();
+  window.addEventListener('resize',()=>{renderer.setSize(W(),H());u.iRes.value.set(W(),H())},{passive:true});
+})();
+
+/* Reveal observer */
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.08,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+/* Nav scroll state */
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('sm',window.scrollY>80)},{passive:true});
+
+/* Smooth anchors */
+function closeMob(){const ham=document.getElementById('ham');if(ham)ham.classList.remove('open');const m=document.getElementById('mob');if(m)m.classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const h=a.getAttribute('href');if(!h||h==='#'||h.length<2)return;
+    const t=document.querySelector(h);if(!t)return;
+    e.preventDefault();closeMob();
+    if(lenis)lenis.scrollTo(t,{duration:1.1});else t.scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* Mobile menu */
+document.getElementById('ham').addEventListener('click',function(){const open=this.classList.toggle('open');document.getElementById('mob').classList.toggle('open',open);document.body.style.overflow=open?'hidden':''});
+
+/* Live time */
+function tick(){try{const t=new Date().toLocaleTimeString('en-ZA',{timeZone:'Africa/Johannesburg',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});document.getElementById('ct-time').textContent='Cape Town · '+t+' SAST'}catch(e){}}
+tick();setInterval(tick,1000);
+
+/* Form */
+const F=document.getElementById('ctF'),BT=document.getElementById('ctBT'),M=document.getElementById('ctM');
+F.addEventListener('submit',async e=>{
+  e.preventDefault();BT.textContent='Sending';
+  try{
+    const r=await fetch(F.action,{method:'POST',body:new FormData(F),headers:{Accept:'application/json'}});
+    const j=await r.json().catch(()=>({}));
+    if(r.ok&&(j.success==='true'||j.success===true)){M.textContent='Brief received. We come back within one working day.';M.className='ct-msg show ok';F.reset();BT.textContent='Sent';setTimeout(()=>{BT.textContent='Send brief';M.className='ct-msg'},5000)}
+    else throw 0;
+  }catch(err){M.textContent='Something went wrong — email hello@evverywhere.com directly.';M.className='ct-msg show er';BT.textContent='Send brief'}
+});
+</script>
+</body>
+</html>
