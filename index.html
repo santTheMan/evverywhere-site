@@ -364,7 +364,7 @@ footer span:first-child{color:rgba(242,235,221,.55)}
     <div class="hero-eb">A Cape Town Creative Studio · Est. 2024</div>
     <h1 class="hero-h" aria-label="evverywhere — Cape Town Creative Studio">
       <span class="ww" id="ww">
-        <span class="ww-base"><span class="ltr"><b>e</b></span><span class="ltr">v</span><span class="ltr">v</span><span class="ltr">e</span><span class="ltr">r</span><span class="ltr">y</span><span class="ltr">w</span><span class="ltr">h</span><span class="ltr">e</span><span class="ltr">r</span><span class="ltr">e</span><span class="ltr"><i>.</i></span></span>
+        <span class="ww-base"><b>e</b>vverywhere<i>.</i></span>
         <span class="ww-cover" aria-hidden="true"><span class="ltr"><b>e</b></span><span class="ltr">v</span><span class="ltr">v</span><span class="ltr">e</span><span class="ltr">r</span><span class="ltr">y</span><span class="ltr">w</span><span class="ltr">h</span><span class="ltr">e</span><span class="ltr">r</span><span class="ltr">e</span><span class="ltr"><i>.</i></span></span>
       </span>
     </h1>
@@ -639,7 +639,7 @@ window.addEventListener('load',()=>{
 (function(){
   const ww=document.getElementById('ww');if(!ww)return;
   const cover=ww.querySelector('.ww-cover');if(!cover)return;
-  const letters=[...ww.querySelectorAll('.ltr')];
+  const letters=[...ww.querySelectorAll('.ww-cover .ltr')];
   let cx=-9999,cy=-9999;
   let mx=-9999,my=-9999;
   let tx=-9999,ty=-9999;
